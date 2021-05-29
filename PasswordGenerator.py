@@ -9,9 +9,12 @@ all = lower + upper + numbers + symbols
 while True:
     try:
         length = int(input("Enter Length of Password: "))
-        break
+        if length > 74:
+            print("Please select a number equal to or less than 74.")
+        else:
+            break
     except ValueError:
-        print("Please select a number equal to or less than 74.")
+        print("Please enter a number.")
 
 password = "".join(random.sample(all, length))
 
