@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="copied">Copied!</div>
+    <main>
+      <p>Password Generator</p>
+      <div class="password-container">
+        <p class="password">abBhuiK</p>
+        <img src="./images/copy-icon.svg" alt="copy" />
+      </div>
+      <div class="details">
+        <div class="length">
+          <p>Character Length</p>
+          <input type="number" value="16" placeholder="" />
+        </div>
+        <div class="component">
+          <div class="check">
+            <img class="upper" src="./images/check-icon.svg" alt="check" />
+          </div>
+          <p>Include Uppercase Letters</p>
+        </div>
+        <div class="component">
+          <div class="check">
+            <img class="lower" src="./images/check-icon.svg" alt="check" />
+          </div>
+          <p>Include Lowercase Letters</p>
+        </div>
+        <div class="component">
+          <div class="check">
+            <img class="num" src="./images/check-icon.svg" alt="check" />
+          </div>
+          <p>Include Numbers</p>
+        </div>
+        <div class="component">
+          <div class="check">
+            <img class="sym" src="./images/check-icon.svg" alt="check" />
+          </div>
+          <p>Include Symbols</p>
+        </div>
+        <button>GENERATE</button>
+      </div>
+      <!-- <a href="./checker/index.html" target="_blank" class="check-password"
+        >Check the strength of your password</a
+      > -->
+    </main>
+  </body>
+</html>

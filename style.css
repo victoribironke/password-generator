@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+  --light-black: hsl(0, 0%, 10%);
+  --green: hsl(120, 80%, 45%);
+  --blue: hsl(215, 52%, 50%);
+  --light-blue: hsl(215, 52%, 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.copied {
+  width: 100px;
+  background: var(--blue);
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+main {
+  width: 90%;
+  max-width: 375px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main > p {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.check-password {
+  width: 100%;
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.password-container {
+  width: 100%;
+  height: auto;
+  padding: 15px 20px;
+  background: var(--light-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.password-container img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.password-container img:hover {
+  scale: 1.05;
+}
+
+.password {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.details {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  background: var(--light-black);
+}
+
+.length {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.length p {
+  color: gray;
+  font-size: 14px;
+}
+
+.length input {
+  width: 50px;
+  height: 25px;
+  outline: none;
+  border: none;
+  background: var(--light-black);
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  padding: 13px 10px 13px 16px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.length input:is(:hover, :focus) {
+  scale: 1.1;
+}
+
+.strength {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.strength p {
+  color: gray;
+}
+
+.progress {
+  width: 50%;
+  background: white;
+  height: 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.progress div {
+  width: 30%;
+  height: 10px;
+  background: var(--blue);
+  border-radius: 100px;
+}
+
+.component {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.component p {
+  color: white;
+}
+
+.check {
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--blue);
+  border-radius: 3px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.check:hover {
+  scale: 1.1;
+}
+
+.check img {
+  width: 100%;
+  transition-duration: 0.1s;
+}
+
+.showing {
+  background: var(--blue);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  letter-spacing: 2px;
+  background: var(--blue);
+  border: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--light-black);
+}
+
+button:hover,
+.check-password:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--light-black);
+  scale: 1.05;
+}
+
+.check-password:hover {
+  background: black;
+}
+
+@media (width >= 1000px) {
+  main {
+    scale: 1.2;
+  }
+}
