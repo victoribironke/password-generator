@@ -6,6 +6,7 @@ const numbersImg = document.querySelector(".num");
 const symbolsImg = document.querySelector(".sym");
 const password = document.querySelector(".password");
 const copied = document.querySelector(".copied");
+const passwordLength = document.querySelector(".length input");
 
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -68,7 +69,7 @@ const generatePassword = () => {
 
   let res = "";
   let finalRes = "";
-  const length = parseInt(document.querySelector(".length input").value);
+  const length = parseInt(passwordLength.value);
 
   for (let i = 0; i < length; i++) {
     includeUppercase
@@ -114,4 +115,16 @@ copy.addEventListener("click", () => {
   copied.classList.add("slide");
   setTimeout(() => copied.classList.remove("slide"), 1500);
 });
-button.addEventListener("click", generatePassword);
+button.addEventListener(
+  "click",
+  parseInt(passwordLength.value) >= 10
+    ? generatePassword
+    : () => {
+        copied.textContent = "Min length of 10 characters";
+        copied.classList.add("red");
+        setTimeout(() => {
+          copied.classList.remove("red");
+        }, 1500);
+        setTimeout(() => (copied.textContent = "Copied!"), 1700);
+      }
+);

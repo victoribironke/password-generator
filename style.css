@@ -5,6 +5,7 @@
   --green: hsl(120, 80%, 45%);
   --blue: hsl(215, 52%, 50%);
   --light-blue: hsl(215, 52%, 60%);
+  --red: red;
 }
 
 * {
@@ -12,7 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  transition: all 0.2s ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 input::-webkit-outer-spin-button,
@@ -36,7 +37,7 @@ body {
 }
 
 .copied {
-  width: 100px;
+  width: auto;
   background: var(--blue);
   height: auto;
   padding: 10px;
@@ -51,9 +52,14 @@ body {
   opacity: 0;
 }
 
-.slide {
+.slide,
+.red {
   opacity: 1;
   transform: translateX(0);
+}
+
+.red {
+  background: var(--red);
 }
 
 main {
@@ -102,7 +108,7 @@ main > p {
 }
 
 .password-container img:hover {
-  scale: 1.05;
+  scale: 1.08;
 }
 
 .password {
@@ -135,7 +141,7 @@ main > p {
 }
 
 .length input {
-  width: 50px;
+  width: 48px;
   height: 25px;
   outline: none;
   border: none;
